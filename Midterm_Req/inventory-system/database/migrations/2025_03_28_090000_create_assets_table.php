@@ -17,7 +17,6 @@ return new class extends Migration
             $table->text('description')->nullable();
             $table->string('location');
             $table->string('status');
-            $table->string('m_note')->nullable();
             $table->timestamps();
         });
     }
