@@ -5,21 +5,20 @@
     <style>
         .gallery img { width: 200px; height: 200px; object-fit: cover; margin: 10px; }
         .gallery div { display: inline-block; position: relative; }
-        button { position: absolute; top: 5px; right: 5px; }
     </style>
 </head>
 <body>
     <h2>Upload Single Image</h2>
     <form action="{{ route('images.upload.single') }}" method="POST" enctype="multipart/form-data">
         @csrf
-        <input type="file" name="image" required>
+        <input type="file" name="image">
         <button type="submit">Upload Single</button>
     </form>
 
     <h2>Upload Multiple Images</h2>
     <form action="{{ route('images.upload.multiple') }}" method="POST" enctype="multipart/form-data">
         @csrf
-        <input type="file" name="images[]" multiple required>
+        <input type="file" name="images[]" multiple>
         <button type="submit">Upload Multiple</button>
     </form>
 
